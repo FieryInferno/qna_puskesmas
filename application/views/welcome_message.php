@@ -46,7 +46,39 @@ https://templatemo.com/tm-568-digimedia
   </div>
   <!-- ***** Preloader End ***** -->
 
-  <div id="contact" class="contact-us section" style="padding-top: 0px;">
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" style="height: 10rem;" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo" style="width: 8rem;height: 8rem;">
+              <img src="<?= base_url(); ?>/assets/images/logo-puskesmas.png">
+            </a>
+            <a href="index.html" class="logo" style="width: 8rem;height: 8rem;">
+              <img src="<?= base_url(); ?>/assets/images/logo-dinkes.png" style="width: 150%;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section">
+                <div><h4>Pelayanan Konseling Gizi Online</h4></div> 
+                <div><h4>UPTD Puskesmas Tlogosari Wetan Kota Semarang</h4></div> 
+              </li>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
         <div class="fill-form" style="padding-bottom: 0px;">
