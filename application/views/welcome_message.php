@@ -1,100 +1,325 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
 
-	<style type="text/css">
+  <head>
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+    <title>QNA</title>
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-		text-decoration: none;
-	}
+    <!-- Bootstrap core CSS -->
+    <link href="<?= base_url('assets/templatemo'); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	a:hover {
-		color: #97310e;
-	}
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="<?= base_url('assets/templatemo'); ?>/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="<?= base_url('assets/templatemo'); ?>/assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="<?= base_url('assets/templatemo'); ?>/assets/css/animated.css">
+    <link rel="stylesheet" href="<?= base_url('assets/templatemo'); ?>/assets/css/owl.css">
+<!--
 
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
+TemplateMo 568 DigiMedia
 
-	#body {
-		margin: 0 15px 0 15px;
-		min-height: 96px;
-	}
+https://templatemo.com/tm-568-digimedia
 
-	p {
-		margin: 0 0 10px;
-		padding:0;
-	}
+-->
+  </head>
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+  <div id="contact" class="contact-us section" style="padding-top: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="fill-form" style="padding-bottom: 0px;">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-4">
+              <div class="info-post">
+                <div class="icon">
+                  <img src="<?= base_url('assets/templatemo'); ?>/assets/images/phone-icon.png" alt="">
+                  <h3>Mulai Bertanya!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Apapun pertanyaan terkait gizi akan kami jawab</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12">
+                <div class="contact-dec">
+                  <img src="<?= base_url('assets/templatemo'); ?>/assets/images/contact-dec-v3.png" alt="">
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                      </fieldset>
+                      <fieldset>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                      </fieldset>
+                      <fieldset>
+                        <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 50px;">
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Cek status gizi anda</h4>
+          <div class="line-dec"></div>
+          <form id="contact" action="" method="post">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-7">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Berat Badan" autocomplete="on" required>
+                      </fieldset>
+                      <fieldset>
+                        <input type="text" name="email" id="email" placeholder="Tinggi Badan" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Pedoman Gizi Seimbang</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Syukuri dan nikmati aneka ragam makanan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Perbanyak makan sayuran dan buah - buahan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Biasakan makan lauk pauk yang mengandung protein tinggi
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Batasi konsumsi gula, garam & lemak
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Biasakan makan lauk pauk yang mengandung protein tinggi
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Biasakan sarapan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Biasakan minum air putih yang cukup
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Biasakan membaca label pada kemasan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Cuci tangan pakai sabun dengan air bersih mengalir
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="info-post">
+                        <div class="icon">
+                          Lakukan aktifitas fisik yang cukup dan pertahankan BB normal
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+  <div id="services" class="services section" style="padding-top: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Sudah seimbangkan asupan gizimu?</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</h4>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <canvas id="myChart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="<?= base_url('assets/templatemo'); ?>/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url('assets/templatemo'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/templatemo'); ?>/assets/js/owl-carousel.js"></script>
+  <script src="<?= base_url('assets/templatemo'); ?>/assets/js/animation.js"></script>
+  <script src="<?= base_url('assets/templatemo'); ?>/assets/js/imagesloaded.js"></script>
+  <script src="<?= base_url('assets/templatemo'); ?>/assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ];
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+    const data = {
+      labels: [
+        'Buah - Buahan',
+        'Sayuran',
+        'Makanan Pokok',
+        'Lauk Pauk',
+      ],
+      datasets: [{
+        label: 'My First Dataset',
+        data: [15, 15, 35, 35],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(70, 242, 8)',
+        ],
+        hoverOffset: 4
+      }]
+    };
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="userguide3/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+    const config = {
+      type: 'pie',
+      data: data,
+    };
+    
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
 
 </body>
 </html>
