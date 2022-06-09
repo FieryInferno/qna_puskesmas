@@ -174,15 +174,33 @@ https://templatemo.com/tm-568-digimedia
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="number" name="name" id="beratBadan" placeholder="Berat Badan" autocomplete="on" required>
+                        <input
+                          type="number"
+                          placeholder="Berat Badan"
+                          oninput="countBMI()"
+                          min="0"
+                          id="beratBadan"
+                        >
                       </fieldset>
                       <fieldset>
-                        <input type="number" name="email" id="tinggiBadan" placeholder="Tinggi Badan" required="">
+                        <input
+                          type="number"
+                          placeholder="Tinggi Badan"
+                          oninput="countBMI()"
+                          min="0"
+                          id="tinggiBadan"
+                        >
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Hasil" disabled></textarea>  
+                        <textarea
+                          type="text"
+                          class="form-control"
+                          id="hasil"
+                          placeholder="Hasil"
+                          disabled
+                        ></textarea>  
                       </fieldset>
                     </div>
                   </div>
@@ -377,6 +395,28 @@ https://templatemo.com/tm-568-digimedia
     );
 
     const showQuestionForm = () => $('#questionForm').attr('style', '');
+
+    const countBMI = () => {
+      const beratBadan  = parseInt($('#beratBadan').val());
+      const tinggiBadan = parseInt($('#tinggiBadan').val()) / 100;
+      const bmi         = beratBadan / (tinggiBadan * tinggiBadan);
+      
+      let hasil;
+      
+      if (bmi < 17) {
+        hasil = 'Kurus tingkat berat';
+      } else if (bmi >= 17 && bmi < 18.5) {
+        hasil = 'Kurus tingkat ringan';
+      } else if (bmi >- 18.5 && bmi < 24.5) {
+        hasil = 'Normal';
+      } else if (bmi >= 24.5 && bmi < 27) {
+        hasil = 'Overweight';
+      } else {
+        hasil = 'Obesitas';
+      }
+
+      $('#hasil').val(hasil);
+    }
   </script>
 </body>
 </html>
