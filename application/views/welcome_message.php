@@ -85,7 +85,7 @@ https://templatemo.com/tm-568-digimedia
           <div class="row d-flex justify-content-center">
             <div class="col-lg-4">
               <div class="info-post">
-                <div class="icon">
+                <div class="icon" onclick="showQuestionForm()">
                   <img src="<?= base_url('assets/templatemo'); ?>/assets/images/phone-icon.png" alt="">
                   <h3>Mulai Bertanya!</h3>
                 </div>
@@ -93,49 +93,43 @@ https://templatemo.com/tm-568-digimedia
             </div>
           </div>
         </div>
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Apapun pertanyaan terkait gizi akan kami jawab</h4>
-            <div class="line-dec"></div>
+        <div id="questionForm" style="display: none;">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h4>Apapun pertanyaan terkait gizi akan kami jawab</h4>
+              <div class="line-dec"></div>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-12">
-                <div class="contact-dec">
-                  <img src="<?= base_url('assets/templatemo'); ?>/assets/images/contact-dec-v3.png" alt="">
+          <div class="col-lg-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+            <form id="contact" action="" method="post">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                  <div class="contact-dec">
+                    <img src="<?= base_url('assets/templatemo'); ?>/assets/images/contact-dec-v3.png" alt="">
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-7">
-                <div class="fill-form">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                      </fieldset>
-                      <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                      </fieldset>
-                      <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
-                      </fieldset>
+                <div class="col-lg-7">
+                  <div class="fill-form">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <input type="name" name="name" id="name" placeholder="Nama" autocomplete="on" required>
+                        </fieldset>
+                        <fieldset>
+                          <textarea name="message" type="text" class="form-control" id="message" placeholder="Pertanyaan" required=""></textarea>  
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="main-button ">Kirim Pertanyaan</button>
+                        </fieldset>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
       <div class="row" style="padding-top: 50px;">
@@ -146,19 +140,49 @@ https://templatemo.com/tm-568-digimedia
           <form id="contact" action="" method="post">
             <div class="row d-flex justify-content-center">
               <div class="col-lg-7">
-                <div class="fill-form">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-3">
+                    <div class="custom-control custom-radio image-checkbox">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="ck2a"
+                        name="ck2"
+                        style="width: 15%;"
+                      >
+                      <label class="custom-control-label" for="ck2a">
+                        <img src="<?= base_url(); ?>assets/images/man.png" alt="#" class="img-fluid">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="custom-control custom-radio image-checkbox">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="ck2b"
+                        name="ck2"
+                        style="width: 15%;"
+                      >
+                      <label class="custom-control-label" for="ck2b">
+                        <img src="<?= base_url(); ?>assets/images/woman.png" alt="#" class="img-fluid">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="fill-form" style="padding-top: 0px;">
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Berat Badan" autocomplete="on" required>
+                        <input type="number" name="name" id="beratBadan" placeholder="Berat Badan" autocomplete="on" required>
                       </fieldset>
                       <fieldset>
-                        <input type="text" name="email" id="email" placeholder="Tinggi Badan" required="">
+                        <input type="number" name="email" id="tinggiBadan" placeholder="Tinggi Badan" required="">
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Hasil" disabled></textarea>  
                       </fieldset>
                     </div>
                   </div>
@@ -351,7 +375,8 @@ https://templatemo.com/tm-568-digimedia
       document.getElementById('myChart'),
       config
     );
-  </script>
 
+    const showQuestionForm = () => $('#questionForm').attr('style', '');
+  </script>
 </body>
 </html>
