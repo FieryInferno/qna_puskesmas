@@ -176,7 +176,7 @@ https://templatemo.com/tm-568-digimedia
                       <fieldset>
                         <input
                           type="number"
-                          placeholder="Berat Badan"
+                          placeholder="Berat Badan (Kg)"
                           oninput="countBMI()"
                           min="0"
                           id="beratBadan"
@@ -185,7 +185,7 @@ https://templatemo.com/tm-568-digimedia
                       <fieldset>
                         <input
                           type="number"
-                          placeholder="Tinggi Badan"
+                          placeholder="Tinggi Badan (cm)"
                           oninput="countBMI()"
                           min="0"
                           id="tinggiBadan"
@@ -226,6 +226,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/bibimbap.png" alt="" style="max-width: 100%;">
                           Syukuri dan nikmati aneka ragam makanan
                         </div>
                       </div>
@@ -233,6 +234,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/vegetables.png" alt="" style="max-width: 100%;">
                           Perbanyak makan sayuran dan buah - buahan
                         </div>
                       </div>
@@ -240,6 +242,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/balanced-diet.png" alt="" style="max-width: 100%;">
                           Biasakan makan lauk pauk yang mengandung protein tinggi
                         </div>
                       </div>
@@ -247,6 +250,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/sugar-cubes.png" alt="" style="max-width: 100%;">
                           Batasi konsumsi gula, garam & lemak
                         </div>
                       </div>
@@ -254,6 +258,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/balanced-diet.png" alt="" style="max-width: 100%;">
                           Biasakan makan lauk pauk yang mengandung protein tinggi
                         </div>
                       </div>
@@ -261,6 +266,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/breakfast.png" alt="" style="max-width: 100%;">
                           Biasakan sarapan
                         </div>
                       </div>
@@ -268,6 +274,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/drink-water.png" alt="" style="max-width: 100%;">
                           Biasakan minum air putih yang cukup
                         </div>
                       </div>
@@ -275,6 +282,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/new-product.png" alt="" style="max-width: 100%;">
                           Biasakan membaca label pada kemasan
                         </div>
                       </div>
@@ -282,6 +290,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/washing-hand.png" alt="" style="max-width: 100%;">
                           Cuci tangan pakai sabun dengan air bersih mengalir
                         </div>
                       </div>
@@ -289,6 +298,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
+                          <img src="<?= base_url(); ?>/assets/images/body-mass.png" alt="" style="max-width: 100%;">
                           Lakukan aktifitas fisik yang cukup dan pertahankan BB normal
                         </div>
                       </div>
@@ -329,7 +339,8 @@ https://templatemo.com/tm-568-digimedia
                             </div>
                             <div class="col-lg-6 align-self-center">
                               <div class="right-image">
-                                <canvas id="myChart"></canvas>
+                                <img src="<?= base_url(); ?>/assets/images/makan-sehat.png" alt="" style="max-width: 100%;">
+                                <!-- <canvas id="myChart"></canvas> -->
                               </div>
                             </div>
                           </div>
@@ -415,7 +426,7 @@ https://templatemo.com/tm-568-digimedia
         hasil = 'Obesitas';
       }
 
-      $('#hasil').val(hasil);
+      $('#hasil').val(`Indeks massa tubuh anda berada di rentang ${bmi.toFixed(1)} dengan kategori ${hasil}`);
     }
   </script>
 </body>
