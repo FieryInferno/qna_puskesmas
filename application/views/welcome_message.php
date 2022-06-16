@@ -192,9 +192,9 @@ https://templatemo.com/tm-568-digimedia
                     <div class="post-item">
                       <div class="right-content">
                         <span class="category"><?= $key->nama; ?></span>
-                        <span class="date"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span>
+                        <span class="date" style="color: black;"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span>
                         <a href="#"><h4><?= $key->pertanyaan; ?></h4></a>
-                        <p><?= $key->jawaban; ?></p>
+                        <p style="color: black;"><?= $key->jawaban; ?></p>
                       </div>
                     </div>
                   </div>
@@ -266,13 +266,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <textarea
-                          type="text"
-                          class="form-control"
-                          id="hasil"
-                          placeholder="Hasil"
-                          disabled
-                        ></textarea>  
+                        <div id="hasil" style="margin-top: 30px;"></div>  
                       </fieldset>
                     </div>
                   </div>
@@ -286,6 +280,7 @@ https://templatemo.com/tm-568-digimedia
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Pedoman Gizi Seimbang</h4>
+            <h6>Panduan konsumsi pangan sehari - hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai kebutuhan tubuh serta berprilaku bersih dan sehat</h6>
             <div class="line-dec"></div>
           </div>
         </div>
@@ -322,7 +317,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
-                          <img src="<?= base_url(); ?>/assets/images/sugar-cubes.png" alt="" style="max-width: 100%;">
+                          <img src="<?= base_url(); ?>/assets/images/no-sugar.png" alt="" style="max-width: 100%;">
                           Batasi konsumsi gula, garam & lemak
                         </div>
                       </div>
@@ -330,7 +325,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
-                          <img src="<?= base_url(); ?>/assets/images/balanced-diet.png" alt="" style="max-width: 100%;">
+                          <img src="<?= base_url(); ?>/assets/images/hot-pot.png" alt="" style="max-width: 100%;">
                           Biasakan makan lauk pauk yang mengandung protein tinggi
                         </div>
                       </div>
@@ -359,6 +354,7 @@ https://templatemo.com/tm-568-digimedia
                         </div>
                       </div>
                     </div>
+                    <div class="col-lg-3"></div>
                     <div class="col-lg-3">
                       <div class="info-post">
                         <div class="icon">
@@ -375,6 +371,7 @@ https://templatemo.com/tm-568-digimedia
                         </div>
                       </div>
                     </div>
+                    <div class="col-lg-3"></div>
                   </div>
                 </div>
               </div>
@@ -385,7 +382,7 @@ https://templatemo.com/tm-568-digimedia
     </div>
   </div>
 
-  <div id="services" class="services section" style="padding-top: 0px;">
+  <div id="services" class="services section" style="padding-top: 0px;position: inherit;">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -487,18 +484,18 @@ https://templatemo.com/tm-568-digimedia
       let hasil;
       
       if (bmi < 17) {
-        hasil = 'Kurus tingkat berat';
+        hasil = 'KURUS TINGKAT BERAT';
       } else if (bmi >= 17 && bmi < 18.5) {
-        hasil = 'Kurus tingkat ringan';
+        hasil = 'KURUS TINGKAT RINGAN';
       } else if (bmi >- 18.5 && bmi < 24.5) {
-        hasil = 'Normal';
+        hasil = 'NORMAL';
       } else if (bmi >= 24.5 && bmi < 27) {
-        hasil = 'Overweight';
+        hasil = 'OVERWEIGHT';
       } else {
-        hasil = 'Obesitas';
+        hasil = 'OBESITAS';
       }
 
-      $('#hasil').val(`Indeks massa tubuh anda berada di rentang ${bmi.toFixed(1)} dengan kategori ${hasil}`);
+      $('#hasil').addClass('form-control').html(`Indeks massa tubuh anda adalah ${bmi.toFixed(1)} Kg/m2 dengan kategori <b>${hasil}</b>`);
     }
   </script>
 </body>
