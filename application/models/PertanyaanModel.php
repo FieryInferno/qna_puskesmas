@@ -12,4 +12,9 @@ class PertanyaanModel extends CI_Model {
   {
     return $this->db->get_where('pertanyaan', ['jawaban' => NULL])->result();
   }
+
+  public function getAll()
+  {
+    return $this->db->get('pertanyaan')->result();
+  }
 }
