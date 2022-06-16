@@ -101,7 +101,8 @@ https://templatemo.com/tm-568-digimedia
             </div>
           </div>
           <div class="col-lg-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-            <form id="contact" action="" method="post">
+            <form id="contact" action="<?= base_url(); ?>pertanyaan" method="post">
+              <?= validation_errors(); ?>
               <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                   <div class="contact-dec">
@@ -113,10 +114,26 @@ https://templatemo.com/tm-568-digimedia
                     <div class="row">
                       <div class="col-lg-12">
                         <fieldset>
-                          <input type="name" name="name" id="name" placeholder="Nama" autocomplete="on" required>
+                          <input
+                            type="name"
+                            name="nama"
+                            id="name"
+                            placeholder="Nama"
+                            autocomplete="on"
+                            required
+                            value="<?= set_value('nama'); ?>"
+                          >
                         </fieldset>
                         <fieldset>
-                          <textarea name="message" type="text" class="form-control" id="message" placeholder="Pertanyaan" required=""></textarea>  
+                          <textarea
+                            name="pertanyaan"
+                            type="text"
+                            class="form-control"
+                            id="message"
+                            placeholder="Pertanyaan"
+                            required=""
+                            value="<?= set_value('pertanyaan'); ?>"
+                          ></textarea>  
                         </fieldset>
                       </div>
                       <div class="col-lg-12">
