@@ -34,11 +34,25 @@ class Pertanyaan extends CI_Controller {
     }
 	}
 
-  public function jawab($id)
+  public function edit($id)
   {
     $pertanyaan = $this->PertanyaanModel->getById($id);
     $data       = array_merge($this->data, $pertanyaan);
 
     $this->load->view('user/pertanyaan/jawab', $data);
+  }
+
+  public function update($id)
+  {
+    $this->form_validation->set_rules('jawaban', 'Jawaban', 'required');
+    
+    if ($this->form_validation->run() == FALSE) {
+      $this->session->set_flashdata('error', validation_errors());
+      redirect($_SERVER['HTTP_REFERER']);
+    } else {
+      $this->PertanyaanModel->update($id, $this->input->post());
+      $this->session->set_flashdata('success', 'Berhasil menjawab pertanyaan');
+      redirect('pertanyaan');
+    }
   }
 }

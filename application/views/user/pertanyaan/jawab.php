@@ -24,6 +24,13 @@
         <div class="row">
           <div class="col-md-6">
             <form action="<?= base_url('jawab/' . $id); ?>" method="post">
+              <?php
+                if ($this->session->error) { ?>
+                  <div class="alert alert-danger" role="alert">
+                    <?= $this->session->error; ?>
+                  </div>
+                <?php }
+              ?>
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">Jawab Pertanyaan</h3>

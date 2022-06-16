@@ -22,4 +22,9 @@ class PertanyaanModel extends CI_Model {
   {
     return $this->db->get_where('pertanyaan', ['id' => $id])->row_array();
   }
+
+  public function update($id, $data)
+  {
+    $this->db->update('pertanyaan', $data, ['id' => $id]);
+  }
 }

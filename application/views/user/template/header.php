@@ -54,7 +54,11 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Pertanyaan
-                <span class="right badge badge-danger"><?= $jumlahPertanyaan; ?></span>
+                <?php
+                  if ($jumlahPertanyaan > 0) { ?>
+                    <span class="right badge badge-danger"><?= $jumlahPertanyaan; ?></span>
+                  <?php }
+                ?>
               </p>
             </a>
           </li>

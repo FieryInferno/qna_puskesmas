@@ -29,6 +29,13 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                <?php
+                  if ($this->session->success) { ?>
+                    <div class="alert alert-success" role="alert">
+                      <?= $this->session->success; ?>
+                    </div>
+                  <?php }
+                ?>
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
