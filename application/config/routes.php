@@ -9,5 +9,7 @@ $route['dashboard']             = 'user';
 $route['pertanyaan']['post']  = 'pertanyaan/store';
 $route['pertanyaan']['get']   = 'pertanyaan';
 
+$route['jawab/(:num)']['get'] = 'pertanyaan/jawab/$1';
+
 $route['login']['get']  = 'login';
 $route['login']['post'] = 'login/auth';

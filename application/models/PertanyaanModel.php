@@ -17,4 +17,9 @@ class PertanyaanModel extends CI_Model {
   {
     return $this->db->get('pertanyaan')->result();
   }
+
+  public function getById($id)
+  {
+    return $this->db->get_where('pertanyaan', ['id' => $id])->row_array();
+  }
 }

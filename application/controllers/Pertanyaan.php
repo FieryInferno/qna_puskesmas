@@ -3,13 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pertanyaan extends CI_Controller {
 
+  public $data;
+  
+  public function __construct() {
+    parent::__construct();
+    $this->data = [
+      'jumlahPertanyaan'  => count($this->PertanyaanModel->getNotAnswered()),
+      'title'             => 'Pertanyaan',
+    ];
+  }
+
   public function index()
   {
-    $data['jumlahPertanyaan'] = count($this->PertanyaanModel->getNotAnswered());
-    $data['title']            = 'Pertanyaan';
-    $data['pertanyaan']       = $this->PertanyaanModel->getAll();
+    $this->data['pertanyaan']       = $this->PertanyaanModel->getAll();
     
-    $this->load->view('user/pertanyaan/index', $data);
+    $this->load->view('user/pertanyaan/index', $this->data);
   }
 
 	public function store()
@@ -25,4 +33,12 @@ class Pertanyaan extends CI_Controller {
       redirect();
     }
 	}
+
+  public function jawab($id)
+  {
+    $pertanyaan = $this->PertanyaanModel->getById($id);
+    $data       = array_merge($this->data, $pertanyaan);
+
+    $this->load->view('user/pertanyaan/jawab', $data);
+  }
 }

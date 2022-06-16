@@ -50,7 +50,7 @@
                           <td><?= $key->pertanyaan; ?></td>
                           <td><?= $key->jawaban; ?></td>
                           <td>
-                            <a href="<?= base_url(); ?>pertanyaan/jawab/<?= $key->id; ?>" class="btn btn-primary">Jawab</a>  
+                            <a href="<?= base_url(); ?>jawab/<?= $key->id; ?>" class="btn btn-primary">Jawab</a>  
                           </td>
                         </tr>
                       <?php }
