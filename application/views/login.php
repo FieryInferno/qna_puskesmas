@@ -23,10 +23,22 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
-
-      <form action="../../index3.html" method="post">
+      <form action="<?= base_url(); ?>login" method="post">
+        <?php
+          if ($this->session->error) { ?>
+            <div class="alert alert-danger" role="alert">
+              <?= $this->session->error; ?>
+            </div>
+          <?php }
+        ?>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            name="username"
+            required
+          >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,7 +46,13 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            name="password"
+            required
+          >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

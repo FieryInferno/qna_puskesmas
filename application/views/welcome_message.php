@@ -102,7 +102,13 @@ https://templatemo.com/tm-568-digimedia
           </div>
           <div class="col-lg-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
             <form id="contact" action="<?= base_url(); ?>pertanyaan" method="post">
-              <?= validation_errors(); ?>
+              <?php
+                if ($this->session->error) { ?>
+                  <div class="alert alert-danger" role="alert">
+                    <?= $this->session->error; ?>
+                  </div>
+                <?php }
+              ?>
               <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                   <div class="contact-dec">

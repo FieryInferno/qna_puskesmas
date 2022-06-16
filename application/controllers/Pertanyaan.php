@@ -9,6 +9,7 @@ class Pertanyaan extends CI_Controller {
     $this->form_validation->set_rules('pertanyaan', 'Pertanyaan', 'required');
 
     if ($this->form_validation->run() == FALSE) {
+      $this->session->set_flashdata('error', validation_errors());
       redirect($_SERVER['HTTP_REFERER']);
     } else {
       $this->PertanyaanModel->create($this->input->post());
