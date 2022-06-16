@@ -5,6 +5,8 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-    $this->load->view('user/dashboard');
+    $data['jumlahPertanyaan'] = count($this->PertanyaanModel->getNotAnswered());
+    
+    $this->load->view('user/dashboard', $data);
 	}
 }

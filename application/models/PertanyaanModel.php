@@ -7,4 +7,9 @@ class PertanyaanModel extends CI_Model {
 	{
     $this->db->insert('pertanyaan', $data);
 	}
+
+  public function getNotAnswered()
+  {
+    return $this->db->get_where('pertanyaan', ['jawaban' => NULL])->result();
+  }
 }
