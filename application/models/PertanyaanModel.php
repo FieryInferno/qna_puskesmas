@@ -27,4 +27,9 @@ class PertanyaanModel extends CI_Model {
   {
     $this->db->update('pertanyaan', $data, ['id' => $id]);
   }
+
+  public function getAnswered()
+  {
+    return $this->db->get_where('pertanyaan', ['jawaban !=' => NULL])->result();
+  }
 }

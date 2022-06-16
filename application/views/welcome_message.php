@@ -155,6 +155,55 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="section-heading" style="margin-bottom: 0px;">
+            <h4>Jawaban dari <em>Pertanyaan</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+
+        <?php
+          function tgl_indo($tanggal){
+            $bulan    = [
+              1 => 'Januari',
+              'Februari',
+              'Maret',
+              'April',
+              'Mei',
+              'Juni',
+              'Juli',
+              'Agustus',
+              'September',
+              'Oktober',
+              'November',
+              'Desember'
+            ];
+            $pecahkan = explode('-', $tanggal);
+
+            return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+          }
+
+          foreach ($pertanyaan as $key) { ?>
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="blog-posts">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="post-item">
+                      <div class="right-content">
+                        <span class="category"><?= $key->nama; ?></span>
+                        <span class="date"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span>
+                        <a href="#"><h4><?= $key->pertanyaan; ?></h4></a>
+                        <p><?= $key->jawaban; ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php }
+        ?>
+      </div>
       <div class="row" style="padding-top: 50px;">
         <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
