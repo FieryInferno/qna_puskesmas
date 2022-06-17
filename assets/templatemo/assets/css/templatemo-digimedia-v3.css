@@ -142,8 +142,8 @@ global styles
 */
 html,
 body {
-  background: #64f0f0;
-  font-family: 'GFS Didot';
+  background: #1ae867;
+  font-family: "Montserrat", sans-serif;
 }
 
 ::selection {
@@ -326,7 +326,7 @@ header
 }
 
 .header-area {
-  background-color: #1bd9d9;
+  background-color: #22c15e;;
   box-shadow: 0px 5px 8px rgba(0,0,0,0.03);
   position: absolute;
   left: 0px;

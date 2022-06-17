@@ -81,7 +81,7 @@ https://templatemo.com/tm-568-digimedia
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
-        <div class="fill-form" style="padding-bottom: 0px;">
+        <div class="fill-form" style="padding-bottom: 0px;padding-right: 0px;padding-left: 0px;">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-4">
               <div class="info-post">
@@ -156,9 +156,9 @@ https://templatemo.com/tm-568-digimedia
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+        <div class="col-lg-4 offset-lg-4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
           <div class="section-heading" style="margin-bottom: 0px;">
-            <h4>Jawaban dari <em>Pertanyaan</em></h4>
+            <h4>Jawaban</h4>
             <div class="line-dec"></div>
           </div>
         </div>
