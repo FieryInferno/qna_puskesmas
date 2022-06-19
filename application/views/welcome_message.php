@@ -63,8 +63,8 @@ https://templatemo.com/tm-568-digimedia
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section">
-                <div><h4>Pelayanan Konseling Gizi Online</h4></div> 
-                <div><h4>UPTD Puskesmas Tlogosari Wetan Kota Semarang</h4></div> 
+                <div><h2><b>Pelayanan Konseling Gizi Online</b></h2></div> 
+                <div><h2><b>UPTD Puskesmas Tlogosari Wetan Kota Semarang</b></h2></div> 
               </li>
             </ul>        
             <a class='menu-trigger'>
@@ -191,10 +191,10 @@ https://templatemo.com/tm-568-digimedia
                   <div class="col-lg-12">
                     <div class="post-item">
                       <div class="right-content">
-                        <span class="category"><?= $key->nama; ?></span>
-                        <span class="date" style="color: black;"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span>
+                        <span class="category" style="font-size: 20px;"><?= $key->nama; ?></span>
+                        <span class="date" style="color: black;font-size: 20px;"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span>
                         <a href="#"><h4><?= $key->pertanyaan; ?></h4></a>
-                        <p style="color: black;"><?= $key->jawaban; ?></p>
+                        <p style="color: black;font-size: 25px;"><?= $key->jawaban; ?></p>
                       </div>
                     </div>
                   </div>
@@ -280,7 +280,7 @@ https://templatemo.com/tm-568-digimedia
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Pedoman Gizi Seimbang</h4>
-            <h6>Panduan konsumsi pangan sehari - hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai kebutuhan tubuh serta berprilaku bersih dan sehat</h6>
+            <h5>Panduan konsumsi pangan sehari - hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai kebutuhan tubuh serta berprilaku bersih dan sehat</h5>
             <div class="line-dec"></div>
           </div>
         </div>
