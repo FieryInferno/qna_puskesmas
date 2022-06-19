@@ -55,4 +55,11 @@ class Pertanyaan extends CI_Controller {
       redirect('pertanyaan');
     }
   }
+
+  public function destroy($id)
+  {
+    $this->PertanyaanModel->delete($id);
+    $this->session->set_flashdata('success', 'Berhasil menghapus pertanyaan');
+    redirect('pertanyaan');
+  }
 }

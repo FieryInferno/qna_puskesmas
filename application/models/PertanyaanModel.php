@@ -32,4 +32,9 @@ class PertanyaanModel extends CI_Model {
   {
     return $this->db->get_where('pertanyaan', ['jawaban !=' => NULL])->result();
   }
+
+  public function delete($id)
+  {
+    $this->db->delete('pertanyaan', ['id' => $id]);
+  }
 }
