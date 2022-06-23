@@ -392,6 +392,9 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12">
+          <img src="<?= base_url(); ?>/assets/images/content-1.png" alt="" style="max-width: 100%;">
+        </div>
+        <div class="col-lg-12">
           <div class="naccs">
             <div class="grid">
               <div class="row">
@@ -408,7 +411,7 @@ https://templatemo.com/tm-568-digimedia
                             </div>
                             <div class="col-lg-6 align-self-center">
                               <div class="right-image">
-                                <img src="<?= base_url(); ?>/assets/images/makan-sehat.png" alt="" style="max-width: 100%;">
+                                <img src="<?= base_url(); ?>/assets/images/content-2.png" alt="" style="max-width: 100%;">
                                 <!-- <canvas id="myChart"></canvas> -->
                               </div>
                             </div>
@@ -433,47 +436,7 @@ https://templatemo.com/tm-568-digimedia
   <script src="<?= base_url('assets/templatemo'); ?>/assets/js/animation.js"></script>
   <script src="<?= base_url('assets/templatemo'); ?>/assets/js/imagesloaded.js"></script>
   <script src="<?= base_url('assets/templatemo'); ?>/assets/js/custom.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    const labels = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-    ];
-
-    const data = {
-      labels: [
-        'Buah - Buahan',
-        'Sayuran',
-        'Makanan Pokok',
-        'Lauk Pauk',
-      ],
-      datasets: [{
-        label: 'My First Dataset',
-        data: [15, 15, 35, 35],
-        backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(70, 242, 8)',
-        ],
-        hoverOffset: 4
-      }]
-    };
-
-    const config = {
-      type: 'pie',
-      data: data,
-    };
-    
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-
     const showQuestionForm = () => $('#questionForm').attr('style', '');
 
     const countBMI = () => {
