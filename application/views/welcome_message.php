@@ -47,7 +47,7 @@ https://templatemo.com/tm-568-digimedia
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" style="height: 10rem;" data-wow-duration="0.75s" data-wow-delay="0s">
+  <header class="header-area header-sticky" style="height: 10rem;background-color: #76ccca;">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -83,11 +83,11 @@ https://templatemo.com/tm-568-digimedia
       <div class="row">
         <div class="fill-form" style="padding-bottom: 0px;padding-right: 0px;padding-left: 0px;">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-4">
+            <div class="col-lg-4" onclick="showQuestionForm()">
               <div class="info-post">
                 <div class="icon" onclick="showQuestionForm()">
-                  <img src="<?= base_url('assets/templatemo'); ?>/assets/images/phone-icon.png" alt="">
-                  <h3>Mulai Bertanya!</h3>
+                  <img src="<?= base_url('assets/templatemo'); ?>/assets/images/phone-icon.png" alt="" onclick="showQuestionForm()">
+                  <h3 onclick="showQuestionForm()">Mulai Bertanya!</h3>
                 </div>
               </div>
             </div>
@@ -121,11 +121,18 @@ https://templatemo.com/tm-568-digimedia
                       <div class="col-lg-12">
                         <fieldset>
                           <input
-                            type="name"
+                            type="text"
                             name="nama"
-                            id="name"
                             placeholder="Nama"
-                            autocomplete="on"
+                            required
+                            value="<?= set_value('nama'); ?>"
+                          >
+                        </fieldset>
+                        <fieldset>
+                          <input
+                            type="text"
+                            name="alamat"
+                            placeholder="alamat"
                             required
                             value="<?= set_value('nama'); ?>"
                           >
@@ -192,8 +199,8 @@ https://templatemo.com/tm-568-digimedia
                     <div class="post-item">
                       <div class="right-content">
                         <span class="category" style="font-size: 20px;"><?= $key->nama; ?></span>
-                        <!-- <span class="date" style="color: black;font-size: 20px;"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span> -->
-                        <a href="#"><h4><?= tgl_indo(substr($key->created_at, 0, 10)) . ' ' . $key->pertanyaan; ?></h4></a>
+                        
+                        <a href="#"><h4><span style="color: #76ccca"><?= tgl_indo(substr($key->created_at, 0, 10)); ?></span> <?= $key->pertanyaan; ?></h4></a>
                         <p style="color: black;font-size: 20px;text-align: justify;"><?= $key->jawaban; ?></p>
                       </div>
                     </div>
@@ -280,7 +287,7 @@ https://templatemo.com/tm-568-digimedia
         <div class="col-lg-12">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Pedoman Gizi Seimbang</h4>
-            <h4>Panduan konsumsi pangan sehari - hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai kebutuhan tubuh serta berprilaku bersih dan sehat</h4>
+            <h5>Panduan Konsumsi Pangan Sehari - Hari yang Mengandung Zat Gizi dalam Jenis dan Jumlah yang Sesuai Kebutuhan Tubuh serta Berprilaku Bersih dan Sehat</h5>
             <div class="line-dec"></div>
           </div>
         </div>
@@ -292,7 +299,7 @@ https://templatemo.com/tm-568-digimedia
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/bibimbap.png" alt="" style="max-width: 100%;">
                           Syukuri dan nikmati aneka ragam makanan
                         </div>
@@ -300,7 +307,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/vegetables.png" alt="" style="max-width: 100%;">
                           Perbanyak makan sayuran dan buah - buahan
                         </div>
@@ -308,7 +315,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/balanced-diet.png" alt="" style="max-width: 100%;">
                           Biasakan makan lauk pauk yang mengandung protein tinggi
                         </div>
@@ -316,7 +323,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/no-sugar.png" alt="" style="max-width: 100%;">
                           Batasi konsumsi gula, garam & lemak
                         </div>
@@ -324,7 +331,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/hot-pot.png" alt="" style="max-width: 100%;">
                           Biasakan makan lauk pauk yang mengandung protein tinggi
                         </div>
@@ -332,7 +339,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/breakfast.png" alt="" style="max-width: 100%;">
                           Biasakan sarapan
                         </div>
@@ -340,7 +347,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/drink-water.png" alt="" style="max-width: 100%;">
                           Biasakan minum air putih yang cukup
                         </div>
@@ -348,7 +355,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/new-product.png" alt="" style="max-width: 100%;">
                           Biasakan membaca label pada kemasan
                         </div>
@@ -357,7 +364,7 @@ https://templatemo.com/tm-568-digimedia
                     <div class="col-lg-3"></div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/washing-hand.png" alt="" style="max-width: 100%;">
                           Cuci tangan pakai sabun dengan air bersih mengalir
                         </div>
@@ -365,7 +372,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div class="col-lg-3">
                       <div class="info-post">
-                        <div class="icon">
+                        <div class="icon" style="font-size: 18px;">
                           <img src="<?= base_url(); ?>/assets/images/body-mass.png" alt="" style="max-width: 100%;">
                           Lakukan aktifitas fisik yang cukup dan pertahankan BB normal
                         </div>
@@ -382,48 +389,22 @@ https://templatemo.com/tm-568-digimedia
     </div>
   </div>
 
-  <div id="services" class="services section" style="padding-top: 0px;position: inherit;">
+  <div id="services" class="services section" style="padding-top: 0px">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Sudah seimbangkan asupan gizimu?</h4>
+            <h4>Sudah seimbangkah asupan gizimu?</h4>
             <div class="line-dec"></div>
           </div>
         </div>
         <div class="col-lg-12">
           <img src="<?= base_url(); ?>/assets/images/content-1.png" alt="" style="max-width: 100%;">
         </div>
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="grid">
-              <div class="row">
-                <div class="col-lg-12">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-6 align-self-center">
-                              <div class="left-text">
-                                <h4>Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</h4>
-                              </div>
-                            </div>
-                            <div class="col-lg-6 align-self-center">
-                              <div class="right-image">
-                                <img src="<?= base_url(); ?>/assets/images/content-2.png" alt="" style="max-width: 100%;">
-                                <!-- <canvas id="myChart"></canvas> -->
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>          
-              </div>
-            </div>
-          </div>
+        <hr>
+        <div class="col-lg-12 mb-5">
+          <img src="<?= base_url(); ?>/assets/images/content-2.png" alt="" style="max-width: 100%;">
+          <h4 class="d-flex justify-content-center"><strong>Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</strong></h4>
         </div>
       </div>
     </div>

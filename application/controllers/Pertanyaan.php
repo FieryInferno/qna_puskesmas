@@ -24,6 +24,7 @@ class Pertanyaan extends CI_Controller {
 	{
     $this->form_validation->set_rules('nama', 'Nama', 'required');
     $this->form_validation->set_rules('pertanyaan', 'Pertanyaan', 'required');
+    $this->form_validation->set_rules('alamat', 'Alamat', 'required');
 
     if ($this->form_validation->run() == FALSE) {
       $this->session->set_flashdata('error', validation_errors());

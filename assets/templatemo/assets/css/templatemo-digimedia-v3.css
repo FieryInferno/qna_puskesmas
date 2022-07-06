@@ -1719,7 +1719,7 @@ Blog
   font-size: 15px;
   color: #fff;
   padding: 8px 12px;
-  background-color: #4da6e7;
+  background-color: #76ccca;
   border-radius: 18px;
   display: inline-block;
 }
@@ -1819,7 +1819,7 @@ form#contact #map iframe {
 
 .fill-form .icon {
   text-align: center;
-  box-shadow: 0px 0px 15px rgb(36, 230, 9);
+  box-shadow: 0px 0px 15px #76ccca;
   border-radius: 23px;
   padding: 25px 15px;
 }

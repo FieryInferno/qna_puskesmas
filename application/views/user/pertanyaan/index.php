@@ -41,6 +41,7 @@
                     <tr>
                       <th>No</th>
                       <th>Nama</th>
+                      <th>Alamat</th>
                       <th>Pertanyaan</th>
                       <th>Jawaban</th>
                       <th>Tindakan</th>
@@ -54,6 +55,7 @@
                         <tr>
                           <td><?= $no++; ?></td>
                           <td><?= $key->nama; ?></td>
+                          <td><?= $key->alamat; ?></td>
                           <td><?= $key->pertanyaan; ?></td>
                           <td><?= $key->jawaban; ?></td>
                           <td>
