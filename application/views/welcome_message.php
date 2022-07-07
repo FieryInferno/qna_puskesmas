@@ -404,7 +404,7 @@ https://templatemo.com/tm-568-digimedia
         <hr>
         <div class="col-lg-12 mb-5">
           <img src="<?= base_url(); ?>/assets/images/content-2.png" alt="" style="max-width: 100%;">
-          <h4 class="d-flex justify-content-center"><strong>Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</strong></h4>
+          <h1 class="d-flex justify-content-center"><strong style="text-align: center;">Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</strong></h1>
         </div>
       </div>
     </div>
