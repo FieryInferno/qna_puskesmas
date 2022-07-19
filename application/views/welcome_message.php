@@ -393,18 +393,18 @@ https://templatemo.com/tm-568-digimedia
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Sudah seimbangkah asupan gizimu?</h4>
-            <div class="line-dec"></div>
-          </div>
-        </div>
-        <div class="col-lg-12">
           <img src="<?= base_url(); ?>/assets/images/content-1.png" alt="" style="max-width: 100%;">
         </div>
         <hr>
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Sudah seimbangkah asupan gizimu?</h4>
+            <h1 class="d-flex justify-content-center"><strong style="text-align: center;">Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</strong></h1>
+            <div class="line-dec"></div>
+          </div>
+        </div>
         <div class="col-lg-12 mb-5">
           <img src="<?= base_url(); ?>/assets/images/content-2.png" alt="" style="max-width: 100%;">
-          <h1 class="d-flex justify-content-center"><strong style="text-align: center;">Komposisi makanan dalam piring kita menentukan jumlah zat gizi yang masuk kedalam tubuh</strong></h1>
         </div>
       </div>
     </div>
